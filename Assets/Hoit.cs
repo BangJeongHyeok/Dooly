@@ -42,6 +42,18 @@ namespace Dooly.Game
             yield return new WaitForSeconds(1.0f);
             IngameManager.HoitManager.ReleaseObject(this.gameObject);
         }
+
+        private Vector2 PointSetting(Vector2 origin)
+        {
+            float x, y;
+
+            x = posA * Mathf.Cos(Random.Range(0, 360) * Mathf.Deg2Rad)
+                + origin.x;
+            y = posB * Mathf.Sin(Random.Range(0, 360) * Mathf.Deg2Rad)
+                + origin.y;
+            return new Vector2(x, y);
+        }
+
         private void DrawTrajectory()
         {
             transform.position = new Vector2(
