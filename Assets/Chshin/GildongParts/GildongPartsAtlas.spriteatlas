@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GildongPartsAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 66a6678cf25d4a246b2ae4548c2440df, type: 3}
+    totalSpriteSurfaceArea: 0
+    bindAsDefault: 1
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 643b03904e32d8d49a880183fb498e4d, type: 3}
+  - {fileID: 21300000, guid: bdb0a8912a6d11c449055739793c2994, type: 3}
+  - {fileID: 21300000, guid: 834ac6c3cee633442bb71ab9a844d0e9, type: 3}
+  - {fileID: 21300000, guid: 0864bb753ca3c7f479cffddc34767f3e, type: 3}
+  - {fileID: 21300000, guid: 3ee9a1a6eeb4f734f93f603eed1dda32, type: 3}
+  - {fileID: 21300000, guid: d8f688f78e6357c4192b3d126544194e, type: 3}
+  - {fileID: 21300000, guid: 74b7553a1d5bc5146a2e0eda76017dcc, type: 3}
+  - {fileID: 21300000, guid: 3553946bc8bc2df4aab6d9ac041c803a, type: 3}
+  - {fileID: 21300000, guid: 2e6e92bb7cf590840a722d92182764ff, type: 3}
+  - {fileID: 21300000, guid: 1e5813dbf94145945822a7b9e413f53c, type: 3}
+  - {fileID: 21300000, guid: 9b3a301c4a18f3d4cb49a4130fac73a7, type: 3}
+  - {fileID: 21300000, guid: 62a26bcdb9cc5d14295f874a0ca8cf4b, type: 3}
+  - {fileID: 21300000, guid: d0b3c55e9a5dffc468495abf5d82d8da, type: 3}
+  - {fileID: 21300000, guid: e8afa78e00c230a4d91dd978d585c791, type: 3}
+  - {fileID: 21300000, guid: f8e0fc8e2810e2944836f83ff465a202, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Gildong_LeftLeg3
+  - Gildong_LeftArm3
+  - Gildong_LeftArm1
+  - Gildong_RightLeg1
+  - Gildong_Body
+  - Gildong_Head
+  - Gildong_LeftLeg1
+  - Gildong_RightArm3
+  - Gildong_Pevis
+  - Gildong_RightLeg3
+  - Gildong_LeftLeg2
+  - Gildong_RightLeg2
+  - Gildong_RightArm1
+  - Gildong_LeftArm2
+  - Gildong_RightArm2
+  m_Tag: GildongPartsAtlas
+  m_IsVariant: 0
