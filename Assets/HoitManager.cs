@@ -2,54 +2,61 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HoitManager : MonoBehaviour
+namespace Dooly.Game
 {
-    private const string hoitObjName = "HoitParticle"; 
 
-    private Queue<GameObject> _hoitQueue = new Queue<GameObject>();
-    [SerializeField] private GameObject _hoitGameObject;
-
-    private void Awake()
+    public class HoitManager : MonoBehaviour
     {
-        _hoitGameObject = Resources.Load("Prefabs/" + hoitObjName) as GameObject;
-    }
 
-    public void SpawnHoit()
-    {
-        _hoitQueue.Enqueue(CreateObject());
-    }
+        private const string hoitObjName = "HoitParticle";
 
-    private GameObject CreateObject()
-    {
-        var obj = Instantiate(_hoitGameObject);
-        obj.SetActive(false);
-        obj.transform.SetParent(transform);
+        private Queue<GameObject> _hoitQueue = new Queue<GameObject>();
+        private GameObject _hoitGameObject;
 
-        return obj;
-    }
-
-    public void InitObject()
-    {
-        if (_hoitQueue.Count > 0)
+        public void Init()
         {
-            var obj = _hoitQueue.Dequeue();
-            obj.transform.SetParent(null);
-            obj.SetActive(true);
-            //return obj;
+            _hoitGameObject = Resources.Load("Prefabs/" + hoitObjName) as GameObject;
+            CreateObject();
         }
-        else
-        {
-            var obj = CreateObject();
-            obj.SetActive(true);
-            obj.transform.SetParent(null);
-            //return newObj;
-        }
-    }
 
-    public void ReleaseObject(GameObject obj)
-    {
-        obj.SetActive(false);
-        obj.transform.SetParent(transform);
-        _hoitQueue.Enqueue(obj);
+        public void SpawnHoit()
+        {
+        }
+
+        private GameObject CreateObject()
+        {
+            var obj = Instantiate(_hoitGameObject);
+            obj.SetActive(false);
+            obj.transform.SetParent(IngameManager.Instance.Disable.transform);
+
+            _hoitQueue.Enqueue(obj);
+
+            return obj;
+        }
+
+        public void InitObject()
+        {
+            if (_hoitQueue.Count > 0)
+            {
+                var obj = _hoitQueue.Dequeue();
+                obj.transform.SetParent(null);
+                obj.SetActive(true);
+                //return obj;
+            }
+            else
+            {
+                var obj = CreateObject();
+                obj.SetActive(true);
+                obj.transform.SetParent(null);
+                //return newObj;
+            }
+        }
+
+        public void ReleaseObject(GameObject obj)
+        {
+            obj.SetActive(false);
+            obj.transform.SetParent(IngameManager.Instance.Disable.transform);
+            _hoitQueue.Enqueue(obj);
+        }
     }
 }
