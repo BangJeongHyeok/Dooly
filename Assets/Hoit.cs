@@ -23,6 +23,12 @@ namespace Dooly.Game
         {
             _isBoom = false;
             this.transform.localPosition = Vector3.zero;
+            t = 0;
+
+            point[0] = masterPos; // P0
+            point[1] = PointSetting(masterPos); // P1
+            point[2] = PointSetting(targetPos); // P2
+            point[3] = masterPos; // P3
         }
 
         private void OnEnable()
