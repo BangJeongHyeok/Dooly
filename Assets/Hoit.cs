@@ -40,11 +40,12 @@ namespace Dooly.Game
         {
             if (_isBoom == false)
             {
-                this.transform.position += new Vector3(1, 0, 0) * Time.deltaTime;
-            } 
-
-            if (Input.GetKeyDown(KeyCode.Mouse1))
+                t += Time.deltaTime * spd;
+                DrawTrajectory();
+            }
+            if (t > 0.5f)
             {
+                //IngameManager.HoitManager.ReleaseObject(this.gameObject);
                 StartCoroutine(Boom());
             }
         }
