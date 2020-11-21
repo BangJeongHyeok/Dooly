@@ -6,7 +6,9 @@ namespace Dooly.Game
 {
     public class IngameManager : MonoBehaviour
     {
-        public IngameManager Instance
+        public GameObject Disable;
+
+        public static IngameManager Instance
         {
             get
             {
@@ -17,10 +19,11 @@ namespace Dooly.Game
                 return _instance;
             }
         }
-        public HoitManager HoitManager { get; set; }
+        public static HoitManager HoitManager { get; set; }
 
         private static IngameManager _instance; 
-        private HoitManager _hoitManager;
+        private static HoitManager _hoitManager;
+
 
         private void Awake()
         {
@@ -28,11 +31,17 @@ namespace Dooly.Game
             _hoitManager = new HoitManager();
 
             SetManager();
+            InitManager();
         }
 
         private void SetManager()
         {
             HoitManager = _hoitManager;
+        }
+
+        private void InitManager()
+        {
+            _hoitManager.Init();
         }
     }
 }
