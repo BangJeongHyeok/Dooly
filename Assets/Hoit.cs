@@ -42,5 +42,12 @@ namespace Dooly.Game
             yield return new WaitForSeconds(1.0f);
             IngameManager.HoitManager.ReleaseObject(this.gameObject);
         }
+        private float FourPointBezier(float a, float b, float c, float d)
+        {
+            return Mathf.Pow((1 - t), 3) * a
+                    + Mathf.Pow((1 - t), 2) * 3 * t * b
+                    + Mathf.Pow(t, 2) * 3 * (1 - t) * c
+                    + Mathf.Pow(t, 3) * d;
+        }
     }
 }
