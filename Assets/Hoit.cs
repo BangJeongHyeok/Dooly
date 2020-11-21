@@ -42,6 +42,14 @@ namespace Dooly.Game
             yield return new WaitForSeconds(1.0f);
             IngameManager.HoitManager.ReleaseObject(this.gameObject);
         }
+        private void DrawTrajectory()
+        {
+            transform.position = new Vector2(
+                FourPointBezier(point[0].x, point[1].x, point[2].x, point[3].x),
+                FourPointBezier(point[0].y, point[1].y, point[2].y, point[3].y)
+            );
+        }
+
         private float FourPointBezier(float a, float b, float c, float d)
         {
             return Mathf.Pow((1 - t), 3) * a
