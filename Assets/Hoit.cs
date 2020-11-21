@@ -7,8 +7,17 @@ namespace Dooly.Game
     public class Hoit : MonoBehaviour
     {
         [SerializeField] private ParticleSystem _particle;
+        private Vector2[] point = new Vector2[4];
+
+        [Range(0, 1)] private float t = 0;
+        private float spd = 3.0f;
+        private float posA = 1.55f;
+        private float posB = 1.45f;
 
         private bool _isBoom = false;
+
+        private Vector2 masterPos = new Vector2(-0.174f, -1.67f);
+        private Vector2 targetPos = new Vector2(5.0f, -0.82f);
 
         public void Init()
         {
