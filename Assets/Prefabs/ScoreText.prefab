@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 5622868749140101632}
   - component: {fileID: 7367574199383361214}
   - component: {fileID: 1088540130131851922}
-  - component: {fileID: 3847891370876675380}
+  - component: {fileID: 793878214}
+  - component: {fileID: 793878210}
   m_Layer: 5
   m_Name: ScoreText
   m_TagString: Untagged
@@ -91,25 +92,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
   m_EffectDistance: {x: 2, y: 2}
   m_UseGraphicAlpha: 1
---- !u!95 &3847891370876675380
-Animator:
-  serializedVersion: 3
+--- !u!111 &793878214
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8479891508042234764}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1cb20f7ce06826f41a62d11aff8b0c22, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 2011c307555de7e42a9a262590773696, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 2011c307555de7e42a9a262590773696, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
+--- !u!114 &793878210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8479891508042234764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 747c9c2dced89444cada2815b9e8a3e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
