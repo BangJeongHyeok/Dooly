@@ -22,7 +22,8 @@ namespace Dooly.Game
         public void Init()
         {
             _isBoom = false;
-            this.transform.localPosition = Vector3.zero;
+            this.transform.localPosition = masterPos;
+
             t = 0;
 
             point[0] = masterPos; // P0
