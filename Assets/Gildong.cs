@@ -2,26 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Gildong : MonoBehaviour
-{
-    public Rigidbody2D Bodyrigid;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+namespace Dooly.Game {
 
-    // Update is called once per frame
-    void Update()
+    public class Gildong : MonoBehaviour
     {
-        if (Input.GetMouseButtonDown(0))
+        public Rigidbody2D Bodyrigid;
+
+        void Update()
         {
-            HitBody(Random.Range(10,80));
+            if (Input.GetMouseButtonDown(0))
+            {
+                IngameManager.HoitManager.InitObject();
+                HitBody(Random.Range(10, 80));
+            }
         }
-    }
 
-    public void HitBody(float HitPower)
-    {
-        Bodyrigid.AddForce(Vector2.right * HitPower, ForceMode2D.Impulse);
+        public void HitBody(float HitPower)
+        {
+            Bodyrigid.AddForce(Vector2.right * HitPower, ForceMode2D.Impulse);
+        }
     }
 }
