@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9035992189206607125}
   - component: {fileID: 7103221754632978021}
   - component: {fileID: 7694654727755268709}
+  - component: {fileID: 2412745007040066346}
   m_Layer: 0
   m_Name: HoitParticle
   m_TagString: Untagged
@@ -91,7 +92,7 @@ TrailRenderer:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
+        value: 0.076927185
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -4919,3 +4920,16 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &2412745007040066346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6047993295579851133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7d15c98894fe60418b6e5d2aa6406b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _particle: {fileID: 7103221754632978021}
