@@ -6,6 +6,7 @@ namespace Dooly.Game {
 
     public class Gildong : MonoBehaviour
     {
+        public GameObject Gildong_prb;
         public Rigidbody2D Bodyrigid;
         public GameObject Gildong_obj;
         List<HingeJoint2D> BodyParts = new List<HingeJoint2D>();
@@ -28,7 +29,7 @@ namespace Dooly.Game {
             }
         }
 
-        public void HitBody(float HitPower)
+        public void HitBody(float HitPower)//폭력
         {
             Bodyrigid.AddForce(Vector2.right * HitPower + (Vector2.up * Random.Range(-50f,50f)), ForceMode2D.Impulse);
         }
@@ -42,7 +43,7 @@ namespace Dooly.Game {
             }
         }
 
-        public void GetNewBody(GameObject GildongBody)
+        public void GetNewBody(GameObject GildongBody)//힌지조인트 싹 가져오는거
         {
             for (int i = 0; i < GildongBody.transform.GetChild(0).transform.childCount; i++)
             {
@@ -51,7 +52,7 @@ namespace Dooly.Game {
             }
         }
 
-        public void BodySlash()
+        public void BodySlash()//사지절단
         {
             if (BodyParts.Count > 0)
             {
@@ -60,6 +61,14 @@ namespace Dooly.Game {
 
                 BodyParts.Clear();
             }
+        }
+
+        public void CreateGildong()//길동 프리팹 새로 생성
+        {
+            GameObject temp = Instantiate(Gildong_prb, new Vector3(1.896f, -0.711f, 0), Quaternion.identity);
+            Gildong_obj = temp;
+            GetNewBody(Gildong_obj);
+            Life = 100;
         }
     }
 }
