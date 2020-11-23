@@ -22,9 +22,11 @@ namespace Dooly.Game
             }
         }
         public static HoitManager HoitManager { get; set; }
+        public static PlayNanooManager PlayNanooManager { get; set; }
 
         private static IngameManager _instance; 
         private static HoitManager _hoitManager;
+        private static PlayNanooManager _playNanooManager;
 
         [HideInInspector] public int Score = 0;
 
@@ -33,6 +35,7 @@ namespace Dooly.Game
         {
             _instance = this;
             _hoitManager = new HoitManager();
+            _playNanooManager = new PlayNanooManager();
 
             SetManager();
             InitManager();
@@ -41,6 +44,7 @@ namespace Dooly.Game
         private void SetManager()
         {
             HoitManager = _hoitManager;
+            PlayNanooManager = _playNanooManager;
         }
 
         private void InitManager()
