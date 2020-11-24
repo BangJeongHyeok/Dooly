@@ -64,12 +64,18 @@ namespace Dooly.Game
             }
         }
 
-        public void CreateGildong()//길동 프리팹 새로 생성
+        public GildongBodyPart GetBodyParts()
         {
-            GameObject temp = Instantiate(Gildong_prb, new Vector3(1.896f, -0.711f, 0), Quaternion.identity);
-            Gildong_obj = temp;
-            GetNewBody(Gildong_obj);
-            Life = 100;
+            if (_bodyPartsStack.Count > 0)
+            {
+                GildongBodyPart bodyPart = _bodyPartsStack.Pop();
+                return bodyPart;
+            }
+            else
+            {
+                IngameManager.DounerManager.PlayCosmos();
+            }
+            return null;
         }
     }
 }
