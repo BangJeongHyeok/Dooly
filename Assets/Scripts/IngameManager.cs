@@ -21,8 +21,8 @@ namespace Dooly.Game
                 return _instance;
             }
         }
-        public static HoitManager HoitManager { get; set; }
-        public static PlayNanooManager PlayNanooManager { get; set; }
+        public static HoitManager HoitManager => _hoitManager;
+        public static PlayNanooManager PlayNanooManager => _playNanooManager;
 
         private static IngameManager _instance; 
         private static HoitManager _hoitManager;
@@ -43,8 +43,6 @@ namespace Dooly.Game
 
         private void SetManager()
         {
-            HoitManager = _hoitManager;
-            PlayNanooManager = _playNanooManager;
         }
 
         private void InitManager()
