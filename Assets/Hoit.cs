@@ -20,6 +20,23 @@ namespace Dooly.Game
         private Vector2 _targetPos;
         private GildongBodyPart _targetPart;
 
+        public void SetPos(Vector2 startPos, GildongBodyPart targetPart)
+        {
+            _startPos = startPos;
+
+            if (targetPart != null)
+            {
+                _targetPos = targetPart.transform.position;
+                _targetPart = targetPart;
+            }
+        }
+        public void SetPos(Vector2 startPos, Vector2 targetPos)
+        {
+            _startPos = startPos;
+            _targetPos = targetPos;
+            _targetPart = null;
+        }
+
         public void Init()
         {
             _isBoom = false;
