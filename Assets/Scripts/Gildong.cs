@@ -43,12 +43,14 @@ namespace Dooly.Game
             }
         }
 
-        public void GetNewBody(GameObject GildongBody)//힌지조인트 싹 가져오는거
+        private void ReConnectParts()
         {
-            for (int i = 0; i < GildongBody.transform.GetChild(0).transform.childCount; i++)
+            _bodyPartsStack.Clear();
+
+            foreach (var part in _bodyParts)
             {
-                HingeJoint2D hinge = GildongBody.transform.GetChild(0).transform.GetChild(i).gameObject.GetComponent<HingeJoint2D>();
-                BodyParts.Add(hinge);
+                part.ReConnectPart();
+                _bodyPartsStack.Push(part);
             }
         }
 
