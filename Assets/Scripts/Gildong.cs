@@ -34,12 +34,13 @@ namespace Dooly.Game
             Bodyrigid.AddForce(Vector2.right * HitPower + (Vector2.up * Random.Range(-50f,50f)), ForceMode2D.Impulse);
         }
 
-        void StateChecker()
+        private IEnumerator ResetPart()
         {
-            Life -= (Random.Range(0, 3)+1);
-            if (Life <= 0)
+            for (int i = 0; i < _bodyParts.Count; i++)
             {
-                BodySlash();
+                _bodyParts[i].ResetPart();
+
+                yield return new WaitForSeconds(0.05f);
             }
         }
 
