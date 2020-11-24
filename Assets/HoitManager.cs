@@ -7,7 +7,6 @@ namespace Dooly.Game
 
     public class HoitManager : MonoBehaviour
     {
-
         private const string hoitObjName = "HoitParticle";
 
         private Queue<GameObject> _hoitQueue = new Queue<GameObject>();
