@@ -41,6 +41,7 @@ namespace Dooly.Game
                 obj = CreateObject();
             }
 
+            SetHoitTarget(obj);
             obj.transform.SetParent(null);
             obj.SetActive(true);
         }
@@ -50,6 +51,22 @@ namespace Dooly.Game
             obj.SetActive(false);
             obj.transform.SetParent(IngameManager.Instance.Disable.transform);
             _hoitQueue.Enqueue(obj);
+        }
+
+        private void SetHoitTarget(GameObject obj) 
+        {
+            Hoit hoit = obj.GetComponent<Hoit>();
+            Vector2 startPos = IngameManager.DoolyManager.GetHoitPivot();
+            GildongBodyPart bodyPart = IngameManager.Gildong.GetBodyParts();
+
+            if (bodyPart == null)
+            {
+                hoit.SetPos(startPos, IngameManager.Gildong.BodyPivot.transform.position);
+            }
+            else
+            {
+                hoit.SetPos(startPos, bodyPart);
+            }
         }
     }
 }
