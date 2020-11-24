@@ -14,6 +14,12 @@ namespace Dooly.Game
 
         private void Start()
         {
+            IngameManager.Instance.SetGildong(this);
+
+            foreach(var part in _bodyParts)
+            {
+                _bodyPartsStack.Push(part);
+            }
         }
 
         void Update()
