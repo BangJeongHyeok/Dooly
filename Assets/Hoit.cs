@@ -16,20 +16,21 @@ namespace Dooly.Game
 
         private bool _isBoom = false;
 
-        private Vector2 masterPos = new Vector2(-0.174f, -1.67f);
-        private Vector2 targetPos = new Vector2(5.0f, -0.82f);
+        private Vector2 _startPos;
+        private Vector2 _targetPos;
+        private GildongBodyPart _targetPart;
 
         public void Init()
         {
             _isBoom = false;
-            this.transform.localPosition = masterPos;
+            this.transform.position = _startPos;
 
             t = 0;
 
-            point[0] = masterPos; // P0
-            point[1] = PointSetting(masterPos); // P1
-            point[2] = PointSetting(targetPos); // P2
-            point[3] = masterPos; // P3
+            point[0] = _startPos; // P0
+            point[1] = PointSetting(_startPos); // P1
+            point[2] = PointSetting(_targetPos); // P2
+            point[3] = _targetPos; // P3
         }
 
         private void OnEnable()
