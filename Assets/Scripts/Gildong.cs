@@ -31,9 +31,15 @@ namespace Dooly.Game
             }
         }
 
-        public void HitBody(float HitPower)//폭력
+        public void GetNewBody()
         {
-            Bodyrigid.AddForce(Vector2.right * HitPower + (Vector2.up * Random.Range(-50f,50f)), ForceMode2D.Impulse);
+            foreach(var part in _bodyParts)
+            {
+                part.DisConnectPart();
+            }
+
+            StartCoroutine(ResetPart());
+            StartCoroutine(WaitRewindBody());
         }
 
         private IEnumerator ResetPart()
