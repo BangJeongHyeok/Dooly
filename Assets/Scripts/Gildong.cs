@@ -7,11 +7,9 @@ namespace Dooly.Game
 
     public class Gildong : MonoBehaviour
     {
-        public GameObject Gildong_prb;
-        public Rigidbody2D Bodyrigid;
-        public GameObject Gildong_obj;
-        List<HingeJoint2D> BodyParts = new List<HingeJoint2D>();
-        int Life = 100;
+        public GameObject BodyPivot;
+        [SerializeField] private List<GildongBodyPart> _bodyParts = new List<GildongBodyPart>();
+        private Stack<GildongBodyPart> _bodyPartsStack = new Stack<GildongBodyPart>();
 
         private void Start()
         {
