@@ -55,15 +55,29 @@ namespace Dooly.Game
             }
         }
 
-        public void BodySlash()//사지절단
+        private IEnumerator WaitRewindBody()
         {
-            if (BodyParts.Count > 0)
+            while (true)
             {
-                for (int i = 0; i < BodyParts.Count; i++)
-                    BodyParts[i].enabled = false;
+                bool AllReset = true;
 
-                BodyParts.Clear();
+                for (int i = 0; i < _bodyParts.Count; i++)
+                {
+                    if (_bodyParts[i].CheckAllReset() == false)
+                    {
+                        AllReset = false;
+                    }
+                }
+
+                if (AllReset)
+                {
+                    break;
+                }
+
+                yield return new WaitForSeconds(0.3f);
             }
+
+            ReConnectParts();
         }
 
         public GildongBodyPart GetBodyParts()
