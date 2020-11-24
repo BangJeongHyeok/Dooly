@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Dooly.Game {
+namespace Dooly.Game
+{
 
     public class Gildong : MonoBehaviour
     {
