@@ -29,16 +29,16 @@ Transform:
   m_Children:
   - {fileID: 3886691092654987809}
   - {fileID: 3886691091648154041}
+  - {fileID: 3886691092440363832}
   - {fileID: 3886691093105896524}
   - {fileID: 3886691092092812522}
   - {fileID: 3886691091708744497}
-  - {fileID: 3886691092440363832}
-  - {fileID: 3886691092440818670}
-  - {fileID: 3886691093005430967}
-  - {fileID: 3886691091996825795}
   - {fileID: 3886691092722052449}
   - {fileID: 3886691092650466131}
   - {fileID: 3886691093396036635}
+  - {fileID: 3886691092440818670}
+  - {fileID: 3886691093005430967}
+  - {fileID: 3886691091996825795}
   - {fileID: 3886691092441816357}
   - {fileID: 3886691091596327900}
   - {fileID: 3886691091893936884}
@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 3886691091596327902}
   - component: {fileID: 5616456514537926046}
   - component: {fileID: 5747627311114131350}
+  - component: {fileID: 4656078439035887453}
   m_Layer: 0
   m_Name: Gildong_RightLeg2
   m_TagString: Untagged
@@ -164,9 +165,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691092441816358}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.12999547, y: 0.45498347}
-  m_ConnectedAnchor: {x: -0.07499546, y: -0.3230165}
+  m_ConnectedAnchor: {x: -0.07499561, y: -0.32301635}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -292,6 +293,20 @@ CompositeCollider2D:
       - {x: 0.0400108, y: -0.336}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &4656078439035887453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691091596327901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691091596327902}
+  _rigid: {fileID: 3886691091596327889}
 --- !u!1 &3886691091648154054
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +321,7 @@ GameObject:
   - component: {fileID: 3886691091648154043}
   - component: {fileID: 4460766799472444349}
   - component: {fileID: 156359818865843373}
+  - component: {fileID: 596096741906911919}
   m_Layer: 0
   m_Name: Gildong_Body
   m_TagString: Untagged
@@ -411,14 +427,14 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691092654987811}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.21723235, y: 0.4983567}
-  m_ConnectedAnchor: {x: 0.24976766, y: -0.49864325}
+  m_ConnectedAnchor: {x: 0.2497676, y: -0.49864325}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
@@ -603,6 +619,20 @@ CompositeCollider2D:
       - {x: -0.1519878, y: -0.64}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &596096741906911919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691091648154054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691091648154043}
+  _rigid: {fileID: 3886691091648154042}
 --- !u!1 &3886691091708744510
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +647,7 @@ GameObject:
   - component: {fileID: 3886691091708744499}
   - component: {fileID: 4510119261201229560}
   - component: {fileID: 8972283540514545310}
+  - component: {fileID: 1021278936533328840}
   m_Layer: 0
   m_Name: Gildong_LeftArm3
   m_TagString: Untagged
@@ -636,7 +667,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691091708744496
 SpriteRenderer:
@@ -722,9 +753,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691092092812527}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.055163622, y: 0.21265832}
-  m_ConnectedAnchor: {x: 0.14283627, y: -0.14434166}
+  m_ConnectedAnchor: {x: 0.14283657, y: -0.14434166}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -826,6 +857,20 @@ CompositeCollider2D:
       - {x: 0.0160076, y: -0.2079999}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &1021278936533328840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691091708744510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691091708744499}
+  _rigid: {fileID: 3886691091708744498}
 --- !u!1 &3886691091724909203
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +880,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3886691091724909202}
+  - component: {fileID: 909886678434969428}
   m_Layer: 0
   m_Name: Gildong
   m_TagString: Untagged
@@ -857,6 +903,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &909886678434969428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691091724909203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5de9752b5e904b478f07b9225f68fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BodyPivot: {fileID: 395959478201189842}
+  _bodyParts:
+  - {fileID: 3040260414492743341}
+  - {fileID: 596096741906911919}
+  - {fileID: 4239718978699942139}
+  - {fileID: 2202680581520929606}
+  - {fileID: 136069250205538564}
+  - {fileID: 1021278936533328840}
+  - {fileID: 4504624838007904321}
+  - {fileID: 2297552680671976938}
+  - {fileID: 6570881892084327347}
+  - {fileID: 4975761783176424956}
+  - {fileID: 9073395663388979069}
+  - {fileID: 4637208949264676610}
+  - {fileID: 5623613171294399897}
+  - {fileID: 4656078439035887453}
+  - {fileID: 5420216960658640704}
 --- !u!1 &3886691091893936885
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +946,7 @@ GameObject:
   - component: {fileID: 3886691091893936886}
   - component: {fileID: 560897107094943269}
   - component: {fileID: 5646649336697991427}
+  - component: {fileID: 5420216960658640704}
   m_Layer: 0
   m_Name: Gildong_RightLeg3
   m_TagString: Untagged
@@ -976,9 +1052,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691091596327889}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.029999018, y: 0.23999119}
-  m_ConnectedAnchor: {x: 0.23700099, y: -0.36300898}
+  m_ConnectedAnchor: {x: 0.23700103, y: -0.36300898}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1076,6 +1152,20 @@ CompositeCollider2D:
       - {x: -0.1119892, y: -0.272}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &5420216960658640704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691091893936885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691091893936886}
+  _rigid: {fileID: 3886691091893936873}
 --- !u!1 &3886691091996825792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1090,6 +1180,7 @@ GameObject:
   - component: {fileID: 3886691091996825797}
   - component: {fileID: 4814088198725175068}
   - component: {fileID: 3497244859335339400}
+  - component: {fileID: 4637208949264676610}
   m_Layer: 0
   m_Name: Gildong_LeftLeg3
   m_TagString: Untagged
@@ -1109,7 +1200,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 8
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691091996825794
 SpriteRenderer:
@@ -1195,9 +1286,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691093005430952}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0.3599999}
-  m_ConnectedAnchor: {x: 0.15000004, y: -0.2380003}
+  m_ConnectedAnchor: {x: 0.15000015, y: -0.23800015}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1299,6 +1390,20 @@ CompositeCollider2D:
       - {x: -0.0799907, y: -0.28800002}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &4637208949264676610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691091996825792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691091996825797}
+  _rigid: {fileID: 3886691091996825796}
 --- !u!1 &3886691092092812523
 GameObject:
   m_ObjectHideFlags: 0
@@ -1313,6 +1418,7 @@ GameObject:
   - component: {fileID: 3886691092092812524}
   - component: {fileID: 7120259469244820751}
   - component: {fileID: 5206896384567095549}
+  - component: {fileID: 136069250205538564}
   m_Layer: 0
   m_Name: Gildong_LeftArm2
   m_TagString: Untagged
@@ -1332,7 +1438,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691092092812525
 SpriteRenderer:
@@ -1418,9 +1524,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691093105896513}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.13204026, y: 0.1303241}
-  m_ConnectedAnchor: {x: 0.4249598, y: -0.0766759}
+  m_ConnectedAnchor: {x: 0.42495966, y: -0.0766759}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -1518,6 +1624,20 @@ CompositeCollider2D:
       - {x: -0.0159922, y: -0.224}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &136069250205538564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691092092812523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691092092812524}
+  _rigid: {fileID: 3886691092092812527}
 --- !u!1 &3886691092440363833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1532,6 +1652,7 @@ GameObject:
   - component: {fileID: 3886691092440363834}
   - component: {fileID: 7587144583154495871}
   - component: {fileID: 1445475987886858852}
+  - component: {fileID: 4239718978699942139}
   m_Layer: 0
   m_Name: Gildong_Pevis
   m_TagString: Untagged
@@ -1551,7 +1672,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691092440363835
 SpriteRenderer:
@@ -1637,14 +1758,14 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691091648154042}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.009999752, y: 0.32498825}
-  m_ConnectedAnchor: {x: 0.19800024, y: -0.69401175}
+  m_ConnectedAnchor: {x: 0.19800022, y: -0.6940118}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
@@ -1772,6 +1893,20 @@ CompositeCollider2D:
       - {x: -0.0559817, y: -0.352}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &4239718978699942139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691092440363833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691092440363834}
+  _rigid: {fileID: 3886691092440363837}
 --- !u!1 &3886691092440818671
 GameObject:
   m_ObjectHideFlags: 0
@@ -1786,6 +1921,7 @@ GameObject:
   - component: {fileID: 3886691092440818656}
   - component: {fileID: 5597844706534230385}
   - component: {fileID: 5050817582378020199}
+  - component: {fileID: 4975761783176424956}
   m_Layer: 0
   m_Name: Gildong_LeftLeg1
   m_TagString: Untagged
@@ -1805,7 +1941,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691092440818657
 SpriteRenderer:
@@ -1891,9 +2027,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691092440363837}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.059998035, y: 0.43498433}
-  m_ConnectedAnchor: {x: 0.22500196, y: 0.06298438}
+  m_ConnectedAnchor: {x: 0.22500187, y: 0.06298423}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2011,6 +2147,20 @@ CompositeCollider2D:
       - {x: -0.2079833, y: -0.46400002}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &4975761783176424956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691092440818671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691092440818656}
+  _rigid: {fileID: 3886691092440818659}
 --- !u!1 &3886691092441816354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,6 +2175,7 @@ GameObject:
   - component: {fileID: 3886691092441816359}
   - component: {fileID: 6796380153084635876}
   - component: {fileID: 7813424591191066273}
+  - component: {fileID: 5623613171294399897}
   m_Layer: 0
   m_Name: Gildong_RightLeg1
   m_TagString: Untagged
@@ -2130,9 +2281,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691092440363837}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.049998403, y: 0.42498446}
-  m_ConnectedAnchor: {x: -0.2260016, y: -0.01901552}
+  m_ConnectedAnchor: {x: -0.22600159, y: -0.01901567}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2257,6 +2408,20 @@ CompositeCollider2D:
       - {x: -0.0159987, y: -0.368}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &5623613171294399897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691092441816354}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691092441816359}
+  _rigid: {fileID: 3886691092441816358}
 --- !u!1 &3886691092650466128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2271,6 +2436,7 @@ GameObject:
   - component: {fileID: 3886691092650466133}
   - component: {fileID: 7690056097063774698}
   - component: {fileID: 7405709010100960870}
+  - component: {fileID: 2297552680671976938}
   m_Layer: 0
   m_Name: Gildong_RightArm2
   m_TagString: Untagged
@@ -2290,7 +2456,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691092650466130
 SpriteRenderer:
@@ -2376,9 +2542,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691092722052450}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.24503934, y: 0.21003371}
-  m_ConnectedAnchor: {x: -0.3659608, y: 0.04603371}
+  m_ConnectedAnchor: {x: -0.3659609, y: 0.046033747}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -2488,6 +2654,20 @@ CompositeCollider2D:
       - {x: -0.1039984, y: -0.336}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &2297552680671976938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691092650466128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691092650466133}
+  _rigid: {fileID: 3886691092650466132}
 --- !u!1 &3886691092654987822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,6 +2682,7 @@ GameObject:
   - component: {fileID: 4796692119719083630}
   - component: {fileID: 5223496930961311721}
   - component: {fileID: 1098038345635594303}
+  - component: {fileID: 3040260414492743341}
   m_Layer: 0
   m_Name: Gildong_Head
   m_TagString: Untagged
@@ -2588,7 +2769,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2607,14 +2788,14 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.1, y: 0}
-  m_ConnectedAnchor: {x: -0.2936, y: 0.7976}
+  m_ConnectedAnchor: {x: 1.6024001, y: 0.086599946}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 360
@@ -2787,6 +2968,20 @@ CompositeCollider2D:
       - {x: 0.1600074, y: -0.57600003}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &3040260414492743341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691092654987822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 4796692119719083630}
+  _rigid: {fileID: 3886691092654987811}
 --- !u!1 &3886691092722052462
 GameObject:
   m_ObjectHideFlags: 0
@@ -2801,6 +2996,7 @@ GameObject:
   - component: {fileID: 3886691092722052451}
   - component: {fileID: 3344945934056317506}
   - component: {fileID: 7160307719429592895}
+  - component: {fileID: 4504624838007904321}
   m_Layer: 0
   m_Name: Gildong_RightArm1
   m_TagString: Untagged
@@ -2820,7 +3016,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691092722052448
 SpriteRenderer:
@@ -2906,9 +3102,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691091648154042}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.48000002, y: 0}
-  m_ConnectedAnchor: {x: -0.49899992, y: 0.43}
+  m_ConnectedAnchor: {x: -0.4989998, y: 0.43}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3030,6 +3226,20 @@ CompositeCollider2D:
       - {x: 0.3280108, y: -0.24000001}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &4504624838007904321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691092722052462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691092722052451}
+  _rigid: {fileID: 3886691092722052450}
 --- !u!1 &3886691093005430964
 GameObject:
   m_ObjectHideFlags: 0
@@ -3044,6 +3254,7 @@ GameObject:
   - component: {fileID: 3886691093005430953}
   - component: {fileID: 2750658368677984389}
   - component: {fileID: 4645407102511668749}
+  - component: {fileID: 9073395663388979069}
   m_Layer: 0
   m_Name: Gildong_LeftLeg2
   m_TagString: Untagged
@@ -3063,7 +3274,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691093005430966
 SpriteRenderer:
@@ -3149,9 +3360,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691092440818659}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.06499767, y: 0.41998482}
-  m_ConnectedAnchor: {x: -0.00599768, y: -0.45501515}
+  m_ConnectedAnchor: {x: -0.0059977174, y: -0.4550153}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3257,6 +3468,20 @@ CompositeCollider2D:
       - {x: -0.0399892, y: -0.272}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &9073395663388979069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691093005430964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691093005430953}
+  _rigid: {fileID: 3886691093005430952}
 --- !u!1 &3886691093105896525
 GameObject:
   m_ObjectHideFlags: 0
@@ -3271,6 +3496,7 @@ GameObject:
   - component: {fileID: 3886691093105896526}
   - component: {fileID: 4037016569772683336}
   - component: {fileID: 2584781700742799103}
+  - component: {fileID: 2202680581520929606}
   m_Layer: 0
   m_Name: Gildong_LeftArm1
   m_TagString: Untagged
@@ -3290,7 +3516,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691093105896527
 SpriteRenderer:
@@ -3376,14 +3602,14 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691091648154042}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: -0.24753428, y: 0.0046833158}
-  m_ConnectedAnchor: {x: 0.49946567, y: 0.6166833}
+  m_ConnectedAnchor: {x: 0.4994656, y: 0.6166833}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
     m_MaximumMotorForce: 10000
-  m_UseLimits: 0
+  m_UseLimits: 1
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
@@ -3484,6 +3710,20 @@ CompositeCollider2D:
       - {x: -0.1679887, y: -0.2079999}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &2202680581520929606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691093105896525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691093105896526}
+  _rigid: {fileID: 3886691093105896513}
 --- !u!1 &3886691093396036632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3498,6 +3738,7 @@ GameObject:
   - component: {fileID: 3886691093396036637}
   - component: {fileID: 2584008492176968259}
   - component: {fileID: 2277875192448708808}
+  - component: {fileID: 6570881892084327347}
   m_Layer: 0
   m_Name: Gildong_RightArm3
   m_TagString: Untagged
@@ -3517,7 +3758,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3117870288447910299}
-  m_RootOrder: 11
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3886691093396036634
 SpriteRenderer:
@@ -3603,9 +3844,9 @@ HingeJoint2D:
   m_ConnectedRigidBody: {fileID: 3886691092650466132}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 1
+  m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0.03867379, y: 0.3164218}
-  m_ConnectedAnchor: {x: -0.09732619, y: -0.34457824}
+  m_ConnectedAnchor: {x: -0.097326115, y: -0.34457824}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -3711,3 +3952,17 @@ CompositeCollider2D:
       - {x: -0.0719906, y: -0.256}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
+--- !u!114 &6570881892084327347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3886691093396036632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3ca7eb5c2d7764fa5f095e0d55d419, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _hinge: {fileID: 3886691093396036637}
+  _rigid: {fileID: 3886691093396036636}
