@@ -22,8 +22,8 @@ namespace Dooly.Game
         {
             if (Input.GetMouseButtonDown(0))
             {
-                IngameManager.HoitManager.InitObject();
                 HitBody(Random.Range(10, 60));//리지드 애드포스
+                IngameManager.HoitManager.SpawnHoit();
                 IngameManager.Instance.scoretext.GetScore(++IngameManager.Instance.Score);//점수
                 StateChecker();//고길동 체력
 

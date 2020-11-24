@@ -18,10 +18,6 @@ namespace Dooly.Game
             CreateObject();
         }
 
-        public void SpawnHoit()
-        {
-        }
-
         private GameObject CreateObject()
         {
             var obj = Instantiate(_hoitGameObject);
@@ -33,22 +29,20 @@ namespace Dooly.Game
             return obj;
         }
 
-        public void InitObject()
+        public void SpawnHoit()
         {
+            GameObject obj = null;
             if (_hoitQueue.Count > 0)
             {
-                var obj = _hoitQueue.Dequeue();
-                obj.transform.SetParent(null);
-                obj.SetActive(true);
-                //return obj;
+                obj = _hoitQueue.Dequeue();
             }
             else
             {
-                var obj = CreateObject();
-                obj.SetActive(true);
-                obj.transform.SetParent(null);
-                //return newObj;
+                obj = CreateObject();
             }
+
+            obj.transform.SetParent(null);
+            obj.SetActive(true);
         }
 
         public void ReleaseObject(GameObject obj)
