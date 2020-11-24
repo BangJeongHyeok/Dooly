@@ -74,6 +74,11 @@ namespace Dooly.Game
             _isBoom = true;
             _particle.Play();
 
+            if (_targetPart != null)
+            {
+                _targetPart.SetHingeEnabled(false);
+            }
+
             yield return new WaitForSeconds(1.0f);
             IngameManager.HoitManager.ReleaseObject(this.gameObject);
         }
