@@ -24,11 +24,13 @@ namespace Dooly.Game
         public static HoitManager HoitManager => _hoitManager;
         public static PlayNanooManager PlayNanooManager => _playNanooManager;
         public static DoolyManager DoolyManager => _doolyManager;
+        public static DounerManager DounerManager => _dounerManager;
 
         private static IngameManager _instance; 
         private static HoitManager _hoitManager;
         private static PlayNanooManager _playNanooManager;
         private static DoolyManager _doolyManager;
+        private static DounerManager _dounerManager;
 
         [HideInInspector] public int Score = 0;
 
@@ -55,6 +57,11 @@ namespace Dooly.Game
         public void SetDoolyManager(DoolyManager dooly)
         {
             _doolyManager = dooly;
+        }
+
+        public void SetDounerManager(DounerManager douner)
+        {
+            _dounerManager = douner;
         }
     }
 }
