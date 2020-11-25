@@ -61,11 +61,11 @@ namespace Dooly.Game
             {
                 t += Time.deltaTime * spd;
                 DrawTrajectory();
-            }
-            if (t >= 1.0f)
-            {
-                //IngameManager.HoitManager.ReleaseObject(this.gameObject);
-                StartCoroutine(Boom());
+                
+                if (t >= 1.0f)
+                {
+                    StartCoroutine(Boom());
+                }
             }
         }
 
