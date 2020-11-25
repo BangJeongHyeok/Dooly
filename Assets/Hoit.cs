@@ -79,6 +79,7 @@ namespace Dooly.Game
                 IngameManager.ScoreManager.AddScore(1);
                 _targetPart.SetHingeEnabled(false);
             }
+            _targetPart = null;
 
             yield return new WaitForSeconds(1.0f);
             IngameManager.HoitManager.ReleaseObject(this.gameObject);
