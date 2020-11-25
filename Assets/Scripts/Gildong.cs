@@ -12,6 +12,8 @@ namespace Dooly.Game
         [SerializeField] private List<GildongBodyPart> _bodyParts = new List<GildongBodyPart>();
         private Stack<GildongBodyPart> _bodyPartsStack = new Stack<GildongBodyPart>();
 
+        private bool _isConnectBody = true;
+
         private void Start()
         {
             IngameManager.Instance.SetGildong(this);
@@ -32,7 +34,9 @@ namespace Dooly.Game
 
         public void GetNewBody()
         {
-            foreach(var part in _bodyParts)
+            _isConnectBody = false;
+
+            foreach (var part in _bodyParts)
             {
                 part.DisConnectPart();
             }
@@ -60,6 +64,8 @@ namespace Dooly.Game
                 part.ReConnectPart();
                 _bodyPartsStack.Push(part);
             }
+
+            _isConnectBody = true;
         }
 
         private IEnumerator WaitRewindBody()
