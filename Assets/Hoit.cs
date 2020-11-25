@@ -76,6 +76,7 @@ namespace Dooly.Game
 
             if (_targetPart != null)
             {
+                IngameManager.ScoreManager.AddScore(1);
                 _targetPart.SetHingeEnabled(false);
             }
 
