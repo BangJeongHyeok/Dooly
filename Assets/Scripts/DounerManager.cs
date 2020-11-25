@@ -9,6 +9,8 @@ namespace Dooly.Game
         [SerializeField] private GameObject _dounerPanel;
         [SerializeField] private Animator _dounerAnim;
 
+        public bool IsPlayingCosmos = false;
+
         private void Start()
         {
             IngameManager.Instance.SetDounerManager(this);
@@ -16,6 +18,7 @@ namespace Dooly.Game
 
         public void PlayCosmos()
         {
+            IsPlayingCosmos = true;
             _dounerPanel.SetActive(true);
             _dounerAnim.Play("TimeCosmos Animation", -1, 0f);
         }

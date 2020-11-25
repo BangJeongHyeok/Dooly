@@ -8,6 +8,7 @@ namespace Dooly.Game
     {
         public void ResurrectionGildong()
         {
+            IngameManager.DounerManager.IsPlayingCosmos = false;
             IngameManager.Gildong.GetNewBody();
             this.gameObject.SetActive(false);
         }
