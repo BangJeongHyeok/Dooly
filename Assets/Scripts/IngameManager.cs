@@ -6,8 +6,6 @@ namespace Dooly.Game
 {
     public class IngameManager : MonoBehaviour
     {
-        public ScoreText scoretext;
-
         public GameObject Disable;
 
         public static IngameManager Instance
@@ -33,9 +31,6 @@ namespace Dooly.Game
         private static DoolyManager _doolyManager;
         private static Gildong _gildong;
         private static DounerManager _dounerManager;
-
-        [HideInInspector] public int Score = 0;
-
 
         private void Awake()
         {

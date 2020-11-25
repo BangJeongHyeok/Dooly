@@ -27,7 +27,6 @@ namespace Dooly.Game
             if (Input.GetMouseButtonDown(0))
             {
                 IngameManager.HoitManager.SpawnHoit();
-                IngameManager.Instance.scoretext.GetScore(++IngameManager.Instance.Score);//점수
             }
         }
 
