@@ -106,5 +106,10 @@ namespace Dooly.Game
             }
             return null;
         }
+
+        public bool IsConnectBody()
+        {
+            return _isConnectBody;
+        }
     }
 }
