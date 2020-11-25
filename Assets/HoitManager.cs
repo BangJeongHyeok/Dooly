@@ -38,7 +38,8 @@ namespace Dooly.Game
             }
             else
             {
-                obj = CreateObject();
+                CreateObject();
+                obj = _hoitQueue.Dequeue();
             }
 
             SetHoitTarget(obj);
