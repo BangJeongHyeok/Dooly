@@ -100,10 +100,6 @@ namespace Dooly.Game
                 GildongBodyPart bodyPart = _bodyPartsStack.Pop();
                 return bodyPart;
             }
-            else
-            {
-                IngameManager.DounerManager.PlayCosmos();
-            }
             return null;
         }
 

@@ -62,6 +62,11 @@ namespace Dooly.Game
 
             if (bodyPart == null)
             {
+                if (IngameManager.DounerManager.IsPlayingCosmos == false && 
+                    IngameManager.Gildong.IsConnectBody() == true)
+                {
+                    IngameManager.DounerManager.PlayCosmos();
+                }
                 hoit.SetPos(startPos, IngameManager.Gildong.BodyPivot.transform.position);
             }
             else
