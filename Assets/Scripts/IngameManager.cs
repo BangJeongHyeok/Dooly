@@ -25,12 +25,15 @@ namespace Dooly.Game
         public static Gildong Gildong => _gildong;
         public static DounerManager DounerManager => _dounerManager;
 
+        public static ScoreManager ScoreManager => _scoreManager;
+
         private static IngameManager _instance; 
         private static HoitManager _hoitManager;
         private static PlayNanooManager _playNanooManager;
         private static DoolyManager _doolyManager;
         private static Gildong _gildong;
         private static DounerManager _dounerManager;
+        private static ScoreManager _scoreManager;
 
         private void Awake()
         {
@@ -64,6 +67,11 @@ namespace Dooly.Game
         public void SetDounerManager(DounerManager douner)
         {
             _dounerManager = douner;
+        }
+
+        public void SetScoreManager(ScoreManager score)
+        {
+            _scoreManager = score;
         }
     }
 }
