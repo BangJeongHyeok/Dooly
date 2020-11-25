@@ -10,7 +10,7 @@ namespace Dooly.Game
         private Vector2[] point = new Vector2[4];
 
         [Range(0, 1)] private float t = 0;
-        private float spd = 3.0f;
+        private float spd = 5.0f;
         private float posA = 1.55f;
         private float posB = 1.45f;
 
