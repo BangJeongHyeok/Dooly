@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class RankingManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void OnClick_Ranking()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
