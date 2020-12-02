@@ -6341,7 +6341,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &729727697
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6437,7 +6437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &762683933
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7898,6 +7898,7 @@ GameObject:
   - component: {fileID: 1775364353}
   - component: {fileID: 1775364352}
   - component: {fileID: 1775364355}
+  - component: {fileID: 1775364356}
   m_Layer: 5
   m_Name: MicholButton
   m_TagString: Untagged
@@ -7966,7 +7967,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1775364353}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1775364356}
+        m_MethodName: Michol_Getin
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1775364353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8022,6 +8034,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1775364356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775364350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54acb88a63df0834594a690539a4c353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _micholButton: {fileID: 1775364350}
+  _micholAnim: {fileID: 1775364355}
 --- !u!1 &1876196468
 GameObject:
   m_ObjectHideFlags: 0
