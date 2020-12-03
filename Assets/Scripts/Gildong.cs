@@ -84,6 +84,7 @@ namespace Dooly.Game
 
                 if (AllReset)
                 {
+                    IngameManager.ScoreManager.AddScore(10);
                     break;
                 }
 
