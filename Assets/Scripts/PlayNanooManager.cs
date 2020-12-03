@@ -8,13 +8,14 @@ public class PlayNanooManager : MonoBehaviour
 {
     private Plugin plugin;
 
-    private string _nickName = null;
-    private int _score = 0;
+    private string _nickName = string.Empty;
+    private int _score;
     private ArrayList list = new ArrayList();
 
     public void Init()
     {
         plugin = Plugin.GetInstance();
+        SetUserInfo();
     }
 
     public void SetUserInfo()
@@ -22,6 +23,17 @@ public class PlayNanooManager : MonoBehaviour
         plugin.SetUUID(SystemInfo.deviceUniqueIdentifier);
         plugin.SetNickname(_nickName);
         plugin.SetLanguage("Configure.PN_LANG_KO");
+    }
+
+    public void SetName(string name)
+    {
+        _nickName = name;
+        plugin.SetNickname(_nickName);
+    }
+
+    public void SetScore(int score)
+    {
+        _score = score;
     }
 
     public void WriteRanking()
