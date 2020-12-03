@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Dooly.Game
 {
@@ -28,7 +29,13 @@ namespace Dooly.Game
         {
             if (Input.GetMouseButtonDown(0))
             {
-                IngameManager.HoitManager.SpawnHoit();
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                if (!EventSystem.current.IsPointerOverGameObject())
+                {
+                    IngameManager.HoitManager.SpawnHoit();
+                }
+                }
             }
         }
 
