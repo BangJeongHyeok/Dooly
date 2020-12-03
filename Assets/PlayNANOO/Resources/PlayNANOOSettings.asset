@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 2123138800, guid: 8e6add97ebb87428fa2b777fc29789a5, type: 3}
   m_Name: PlayNANOOSettings
   m_EditorClassIdentifier: 
-  gameID: 
-  serviceKey: 
-  secreteKey: 
+  gameID: dooly
+  serviceKey: 01H0O9MJJH5LCVZ
+  secreteKey: 4YQC8AZJG6HJOL6CUU7J1E5ION7IJXQJ
   androidVersion: 0
   iOSVersion: 0
   debugMode: 1
