@@ -90,13 +90,14 @@ GameObject:
   - component: {fileID: 6627174798494514675}
   - component: {fileID: 4782301991283142632}
   - component: {fileID: 6868536762283364343}
+  - component: {fileID: 2122033037646427548}
   m_Layer: 5
   m_Name: RankingUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6627174798494514675
 RectTransform:
   m_ObjectHideFlags: 0
@@ -114,9 +115,9 @@ RectTransform:
   m_Father: {fileID: 6786251109196724101}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 410, y: -90}
   m_SizeDelta: {x: 740, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4782301991283142632
@@ -155,6 +156,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &2122033037646427548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474039313691122088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be3ae76e1a031eb4b8c19e7f24cc8fa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _rank: {fileID: 7111480575227429445}
+  _name: {fileID: 9104521194688151652}
+  _score: {fileID: 6748227766810214652}
 --- !u!1 &3421836936304160940
 GameObject:
   m_ObjectHideFlags: 0
