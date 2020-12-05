@@ -20,7 +20,6 @@ namespace Dooly.Game {
 
         private void OnResponseRanking(ArrayList list)
         {
-            IngameManager.PlayNanooManager.WriteRanking();
             _rankScroll.SetRanking(list);
             _rankScroll.gameObject.SetActive(true);
             _margin.SetActive(true);
