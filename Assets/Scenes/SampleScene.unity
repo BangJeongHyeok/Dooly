@@ -5853,6 +5853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 474643490}
+  - component: {fileID: 474643491}
   m_Layer: 5
   m_Name: MicholPivot
   m_TagString: Untagged
@@ -5875,11 +5876,25 @@ RectTransform:
   m_Father: {fileID: 614285847}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 540, y: -960}
-  m_SizeDelta: {x: 600, y: 600}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 400}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &474643491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474643489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54acb88a63df0834594a690539a4c353, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _micholButton: {fileID: 1775364350}
+  _micholAnim: {fileID: 1775364355}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,11 +6141,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1132902627}
+  - {fileID: 1957684880}
   - {fileID: 474643490}
   - {fileID: 1063679730}
+  - {fileID: 1132902627}
   - {fileID: 762683933}
-  - {fileID: 1957684880}
   - {fileID: 729727697}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -6507,7 +6522,7 @@ RectTransform:
   - {fileID: 163699558}
   - {fileID: 687056701}
   m_Father: {fileID: 614285847}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -7254,7 +7269,7 @@ RectTransform:
   m_Children:
   - {fileID: 364490165}
   m_Father: {fileID: 614285847}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8242,14 +8257,13 @@ GameObject:
   - component: {fileID: 1775364353}
   - component: {fileID: 1775364352}
   - component: {fileID: 1775364355}
-  - component: {fileID: 1775364356}
   m_Layer: 5
   m_Name: MicholButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1775364351
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8257,13 +8271,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775364350}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.38268343, w: 0.92387956}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 474643490}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -45}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -8287,7 +8301,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -8312,7 +8326,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1775364356}
+      - m_Target: {fileID: 474643491}
         m_MethodName: Michol_Getin
         m_Mode: 1
         m_Arguments:
@@ -8378,21 +8392,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1775364356
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775364350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54acb88a63df0834594a690539a4c353, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _MicholPivot: {fileID: 474643489}
-  _micholButton: {fileID: 1775364350}
-  _micholAnim: {fileID: 1775364355}
 --- !u!1 &1876196468
 GameObject:
   m_ObjectHideFlags: 0
@@ -8617,7 +8616,7 @@ RectTransform:
   - {fileID: 1682585276}
   - {fileID: 1990029460}
   m_Father: {fileID: 614285847}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
