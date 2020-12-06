@@ -20,9 +20,10 @@ namespace Dooly.Game {
             this.transform.Rotate(new Vector3(0, 0, -500.0f * Time.deltaTime));
 
             Vector3 dir = Camera.main.WorldToViewportPoint(IngameManager.Gildong.BodyPivot.transform.position) - this.transform.position;
-            //dir.Normalize();
 
             this.transform.position += dir.normalized * Time.deltaTime * speed;
+
+
         }
 
         public void BlockingSword()
