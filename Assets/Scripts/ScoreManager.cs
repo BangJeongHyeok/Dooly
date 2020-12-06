@@ -19,5 +19,10 @@ namespace Dooly.Game {
             _score += score;
             scoretext.ApplyScore(_score);
         }
+
+        public int GetScore()
+        {
+            return _score;
+        }
     }
 }
