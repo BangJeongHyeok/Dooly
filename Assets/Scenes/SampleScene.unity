@@ -6287,8 +6287,7 @@ RectTransform:
   - {fileID: 1063679730}
   - {fileID: 1132902627}
   - {fileID: 1957684880}
-  - {fileID: 762683933}
-  - {fileID: 729727697}
+  - {fileID: 1639589445}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6542,20 +6541,20 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 729727696}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 910230919}
   - {fileID: 1058997889}
   - {fileID: 280526891}
-  m_Father: {fileID: 614285847}
-  m_RootOrder: 5
+  m_Father: {fileID: 1639589445}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: 980, y: 1818.5883}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &729727698
 MonoBehaviour:
@@ -6624,6 +6623,7 @@ GameObject:
   - component: {fileID: 762683935}
   - component: {fileID: 762683934}
   - component: {fileID: 762683936}
+  - component: {fileID: 762683937}
   m_Layer: 5
   m_Name: GildongPanel
   m_TagString: Untagged
@@ -6638,7 +6638,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 762683932}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6663,8 +6663,8 @@ RectTransform:
   - {fileID: 1657627258}
   - {fileID: 163699558}
   - {fileID: 687056701}
-  m_Father: {fileID: 614285847}
-  m_RootOrder: 4
+  m_Father: {fileID: 1639589445}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -6726,6 +6726,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &762683937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 762683932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f24ab7ed34edf674a84021f388942646, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameOverPanel: {fileID: 729727696}
 --- !u!1 &763505734
 GameObject:
   m_ObjectHideFlags: 0
@@ -7966,6 +7979,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565579159}
   m_CullTransparentMesh: 0
+--- !u!1 &1639589444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639589445}
+  - component: {fileID: 1639589446}
+  m_Layer: 5
+  m_Name: GildongManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1639589445
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639589444}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 762683933}
+  - {fileID: 729727697}
+  m_Father: {fileID: 614285847}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1639589446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639589444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2499e05b0efe2a7429028272d8fcb1d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gildongPanel: {fileID: 762683932}
+  _gameoverPanel: {fileID: 729727696}
 --- !u!1 &1657627257
 GameObject:
   m_ObjectHideFlags: 0
@@ -8547,7 +8612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c09d78d1b307084097ec10ef2eec9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IceSword: {fileID: 0}
+  IceSword: {fileID: 601702345}
 --- !u!1 &1876196468
 GameObject:
   m_ObjectHideFlags: 0
