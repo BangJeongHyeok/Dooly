@@ -6527,6 +6527,7 @@ GameObject:
   - component: {fileID: 729727699}
   - component: {fileID: 729727698}
   - component: {fileID: 729727700}
+  - component: {fileID: 729727701}
   m_Layer: 5
   m_Name: GameOverPanel
   m_TagString: Untagged
@@ -6611,6 +6612,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &729727701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729727696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0378060506cf2f1448e1fa0e15296831, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &762683932
 GameObject:
   m_ObjectHideFlags: 0
