@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameOverAnimationEvent : MonoBehaviour
+namespace Dooly.Game
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameOverAnimationEvent : MonoBehaviour
     {
-        
-    }
+        // Start is called before the first frame update
+        void Start()
+        {
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        }
 
-    public void GoGameOverScene()
-    {
-        SceneChanger.Instance.ChangeScene("GameOverScene");
+        // Update is called once per frame
+        void Update()
+        {
+
+        }
+
+        public void GoGameOverScene()
+        {
+            Global.SceneChanger.ChangeScene("GameOverScene");
+        }
     }
 }
