@@ -36,6 +36,11 @@ public class PlayNanooManager : MonoBehaviour
         _score = score;
     }
 
+    public int GetScore()
+    {
+        return _score;
+    }
+
     public void WriteRanking()
     {
         // 랭킹코드, 점수, 데이터
