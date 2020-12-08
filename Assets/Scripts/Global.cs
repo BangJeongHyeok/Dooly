@@ -6,5 +6,38 @@ namespace Dooly
 {
     public class Global : MonoBehaviour
     {
+        public static Global Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    return null;
+                }
+                return _instance;
+            }
+        }
+
+        public static PlayNanooManager PlayNanooManager => _playNanooManager;
+
+        private static Global _instance;
+        private static PlayNanooManager _playNanooManager;
+
+        void Awake()
+        {
+            if (_instance == null)
+            {
+                _instance = this;
+                DontDestroyOnLoad(this.gameObject);
+            }
+            else
+            {
+                Destroy(this.gameObject);
+            }
+
+            _playNanooManager = new PlayNanooManager();
+
+            _playNanooManager.Init();
+        }
     }
 }

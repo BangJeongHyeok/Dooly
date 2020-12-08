@@ -10,7 +10,7 @@ namespace Dooly.Game {
 
         public void OnClick_Ranking()
         {
-            IngameManager.PlayNanooManager.RequestRanking(OnResponseRanking);
+            Global.PlayNanooManager.RequestRanking(OnResponseRanking);
         }
         public void OnClick_Margin()
         {
