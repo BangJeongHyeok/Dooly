@@ -9,7 +9,7 @@ namespace Dooly.Game {
 
         private void SetSpeed()
         {
-            speed = 5 + IngameManager.ScoreManager.GetScore() / 50 * 10;
+            speed = 1 + IngameManager.ScoreManager.GetScore() / 50;
         }
 
         // Update is called once per frame
