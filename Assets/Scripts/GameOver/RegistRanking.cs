@@ -11,14 +11,14 @@ namespace Dooly {
 
         private void Awake()
         {
-            Global.PlayNanooManager.Init();
-            _scoreText.text = Global.PlayNanooManager.GetScore().ToString();
+            //Global.PlayNanooManager.Init();
+            //_scoreText.text = Global.PlayNanooManager.GetScore().ToString();
         }
 
         public void WriteRanking()
         {
-            Global.PlayNanooManager.SetName(_nameText.text);
-            Global.PlayNanooManager.WriteRanking();
+            //Global.PlayNanooManager.SetName(_nameText.text);
+            //Global.PlayNanooManager.WriteRanking();
         }
     }
 }

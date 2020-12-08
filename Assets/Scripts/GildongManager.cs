@@ -16,7 +16,7 @@ namespace Dooly.Game
 
         public void GildongGetSword()
         {
-            Global.PlayNanooManager.SetScore(IngameManager.ScoreManager.GetScore());
+            //Global.PlayNanooManager.SetScore(IngameManager.ScoreManager.GetScore());
             _gildongPanel.SetActive(true);
         }
     }
