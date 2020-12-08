@@ -4,73 +4,77 @@ using System.Collections.Generic;
 using UnityEngine;
 using PlayNANOO;
 
-public class PlayNanooManager : MonoBehaviour
+namespace Dooly
 {
-    private Plugin plugin;
-
-    private string _nickName = string.Empty;
-    private int _score;
-    private ArrayList list = new ArrayList();
-
-    public void Init()
+    public class PlayNanooManager : MonoBehaviour
     {
-        plugin = Plugin.GetInstance();
-        SetUserInfo();
-    }
+        private Plugin plugin;
 
-    public void SetUserInfo()
-    {
-        plugin.SetUUID(SystemInfo.deviceUniqueIdentifier);
-        plugin.SetNickname(_nickName);
-        plugin.SetLanguage("Configure.PN_LANG_KO");
-    }
+        private string _nickName = string.Empty;
+        private int _score;
+        private ArrayList list = new ArrayList();
 
-    public void SetName(string name)
-    {
-        _nickName = name;
-        plugin.SetNickname(_nickName);
-    }
-
-    public void SetScore(int score)
-    {
-        _score = score;
-    }
-
-    public int GetScore()
-    {
-        return _score;
-    }
-
-    public void WriteRanking()
-    {
-        // 랭킹코드, 점수, 데이터
-        plugin.RankingRecord("dooly-RANK-BC09F27A-99057B5A", _score, _nickName, (state, message, rawData, dictionary) =>
+        public void Init()
         {
-            if (state.Equals(Configure.PN_API_STATE_SUCCESS))
-            {
-                Debug.Log("Success");
-            }
-            else
-            {
-                Debug.Log("Fail");
-            }
-        });
-    }
+            plugin = Plugin.GetInstance();
+            SetUserInfo();
+        }
 
-    public void RequestRanking(Action<ArrayList> action)
-    {
-        // 랭킹코드, 몇개 까지 보이는지 (50개가 최대)
-        plugin.Ranking("dooly-RANK-BC09F27A-99057B5A", 50, (state, message, rawData, dictionary) =>
+        public void SetUserInfo()
         {
-            if (state.Equals(Configure.PN_API_STATE_SUCCESS))
+            plugin.SetUUID(SystemInfo.deviceUniqueIdentifier);
+            plugin.SetNickname(_nickName);
+            plugin.SetLanguage("Configure.PN_LANG_KO");
+        }
+
+        public void SetName(string name)
+        {
+            _nickName = name;
+            plugin.SetNickname(_nickName);
+        }
+
+        public void SetScore(int score)
+        {
+            _score = score;
+        }
+
+        public int GetScore()
+        {
+            return _score;
+        }
+
+        public void WriteRanking()
+        {
+            // 랭킹코드, 점수, 데이터
+            plugin.RankingRecord("dooly-RANK-BC09F27A-99057B5A", _score, _nickName, (state, message, rawData, dictionary) =>
             {
-                list = (ArrayList)dictionary["list"];
-                action.Invoke(list);
-            }
-            else
+                if (state.Equals(Configure.PN_API_STATE_SUCCESS))
+                {
+                    Debug.Log("Success");
+                    Global.SceneChanger.ChangeScene("TitleScene");
+                }
+                else
+                {
+                    Debug.Log("Fail");
+                }
+            });
+        }
+
+        public void RequestRanking(Action<ArrayList> action)
+        {
+            // 랭킹코드, 몇개 까지 보이는지 (50개가 최대)
+            plugin.Ranking("dooly-RANK-BC09F27A-99057B5A", 50, (state, message, rawData, dictionary) =>
             {
-                Debug.Log("Fail");
-            }
-        });
+                if (state.Equals(Configure.PN_API_STATE_SUCCESS))
+                {
+                    list = (ArrayList)dictionary["list"];
+                    action.Invoke(list);
+                }
+                else
+                {
+                    Debug.Log("Fail");
+                }
+            });
+        }
     }
 }
