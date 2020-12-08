@@ -51,6 +51,7 @@ namespace Dooly.Game
         private void InitManager()
         {
             _hoitManager.Init();
+            Global.PlayNanooManager.Init();
         }
 
         public void SetDoolyManager(DoolyManager dooly)
