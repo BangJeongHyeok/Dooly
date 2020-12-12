@@ -19,9 +19,11 @@ namespace Dooly
         }
 
         public static SceneChanger SceneChanger => _sceneChanger;
+        public static PhotonManager PhotonManager => _photonManager;
 
         private static Global _instance;
         private static SceneChanger _sceneChanger;
+        private static PhotonManager _photonManager;
 
         void Awake()
         {
@@ -36,6 +38,9 @@ namespace Dooly
             }
 
             _sceneChanger = new SceneChanger();
+            _photonManager = new PhotonManager();
+
+            _photonManager.Init();
         }
     }
 }

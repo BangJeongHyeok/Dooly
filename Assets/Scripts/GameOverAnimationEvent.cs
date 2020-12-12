@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 namespace Dooly.Game
 {
@@ -20,7 +21,8 @@ namespace Dooly.Game
 
         public void GoGameOverScene()
         {
-            Global.SceneChanger.ChangeScene("GameOverScene");
+            PhotonNetwork.Disconnect();
+            Global.SceneChanger.ChangeScene("TitleScene");
         }
     }
 }

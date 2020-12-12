@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 namespace Dooly.Game
 {
@@ -25,6 +26,7 @@ namespace Dooly.Game
         public static DounerManager DounerManager => _dounerManager;
         public static ScoreManager ScoreManager => _scoreManager;
         public static GildongManager GildongManager => _gildongManager;
+        public static RankingManager RankingManager => _rankingManager;
 
 
         private static IngameManager _instance; 
@@ -34,6 +36,7 @@ namespace Dooly.Game
         private static DounerManager _dounerManager;
         private static ScoreManager _scoreManager;
         private static GildongManager _gildongManager;
+        private static RankingManager _rankingManager;
 
         private void Awake()
         {
@@ -51,6 +54,7 @@ namespace Dooly.Game
         private void InitManager()
         {
             _hoitManager.Init();
+            PhotonNetwork.Instantiate("PhotonPlayer", Vector3.zero, Quaternion.identity);
             //Global.PlayNanooManager.Init();
         }
 
@@ -77,6 +81,11 @@ namespace Dooly.Game
         public void SetGildongManager(GildongManager gildong)
         {
             _gildongManager = gildong;
+        }
+        
+        public void SetRankingManager(RankingManager ranking)
+        {
+            _rankingManager = ranking;
         }
     }
 }

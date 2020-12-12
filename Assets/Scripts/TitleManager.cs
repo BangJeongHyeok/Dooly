@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
 
 namespace Dooly
 {
@@ -13,6 +14,12 @@ namespace Dooly
         private int Page = 0;
         private bool isSkip = false;
 
+        [SerializeField] private GameObject Loading;
+        [SerializeField] private GameObject MultiButton;
+        [SerializeField] private GameObject SingleButton;
+        [SerializeField] private GameObject NickNamePanel;
+        [SerializeField] private Text nameText;
+
         void Start()
         {
             isSkip = PlayerPrefs.GetInt("isSkip", 0) == 1 ? true : false;
@@ -22,18 +29,7 @@ namespace Dooly
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if (TitleImage)
-                {
-                    if (isSkip)
-                        Global.SceneChanger.ChangeScene("SampleScene");
-                    else
-                    {
-                        Panel_Title.SetActive(false);
-                        Panel_Story.SetActive(true);
-                        TitleImage = false;
-                    }
-                }
-                else
+                if (!TitleImage)
                 {
                     Page++;
 
@@ -59,6 +55,37 @@ namespace Dooly
         GameObject GetStoryChild(int ChildCount)
         {
             return Panel_Story.transform.GetChild(ChildCount).gameObject;
+        }
+
+        public void OnClickMulti()
+        {
+            MultiButton.SetActive(false);
+            SingleButton.SetActive(false);
+            NickNamePanel.SetActive(true);
+        }
+
+        public void OnClickConnect()
+        {
+            PhotonNetwork.NickName = nameText.text;
+            Loading.SetActive(true);
+            Global.PhotonManager.Connect();
+        }
+
+        public void OnClickSingle()
+        {
+            if (TitleImage)
+            {
+                if (isSkip)
+                    Global.SceneChanger.ChangeScene("SampleScene");
+                else
+                {
+                    Panel_Title.SetActive(false);
+                    Panel_Story.SetActive(true);
+                    TitleImage = false;
+                    Page = -1;
+                }
+            }
+           
         }
     }
 }
